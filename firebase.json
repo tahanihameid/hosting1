@@ -1,0 +1,33 @@
+{
+  "database": {
+    "rules": "database.rules.json"
+  },
+  "hosting": {
+    "public": "out",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "headers":[
+      { "source" : "/api.json" , 
+       "headers" : [{
+       "key": "Access-Control-Allow-Origin",
+       "value": "*"
+     }]}
+     ]
+  
+  },
+  "emulators": {
+    "database": {
+      "port": 5004
+    },
+    "hosting": {
+      "port":  "127.0.0.1"
+    },
+    "ui": {
+      "enabled": true
+    }
+  }
+}
+
